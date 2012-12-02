@@ -1,0 +1,49 @@
+
+mcgraw
+11/01/2012
+time in: 9:00am
+time out: 5:00pm
+notes: Thursday
+hours today: |8|
+
+mcgraw
+11/05/2012
+time in: 9:00am
+time out: 5:00pm
+notes: Monday
+hours today: |8|
+
+mcgraw
+11/06/2012
+time in: 9:00am
+time out: 2:00pm
+notes: Tuesday Vote Day
+hours today: |5|
+
+mcgraw
+11/07/2012
+time in: 9:15am
+time out: 5:15pm
+notes: Wednesday
+hours today: |8|
+
+mcgraw
+11/08/2012
+time in: 9:00am
+time out: 5:00pm
+notes: Thursday
+hours today: |8|
+
+mcgraw
+11/12/2012
+time in: 9:15am
+time out: 5:15pm
+notes: Monday
+hours today: |8|
+
+mcgraw
+11/13/2012
+time in: 9:00am
+time out: 3:00pm
+notes: Tuesday To Columbia
+hours today: |6|

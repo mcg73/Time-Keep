@@ -1,0 +1,58 @@
+/* CSS Document */
+@charset "UTF-8";
+/* CSS Document */
+
+section {
+	display: inline-block;
+}
+#inputContain {
+	width: auto;
+	background-color: #5b667e;
+	display: inline-table;
+	padding: 55px;
+	margin: 55px;
+	border-radius: 10px;
+	border: groove #A00 4px;
+	border-radius: 14px;
+	display: inline-block;
+	color: #CF6;
+	float: left;
+}
+#calendar {
+	margin-top: 25px;
+}
+span {
+	font-size: 10px;
+	color: #C00;
+}
+#input {
+	width: auto;
+	font-size: 16px;
+	font: Georgia, "Times New Roman", Times, serif;
+	display: inline-block;
+}
+#totals {
+	float: left;
+	width: auto;
+	background-color: #9EC4CF;
+	padding: 55px;
+	margin: 55px;
+	border-radius: 10px;
+	border: groove #A00 4px;
+	border-radius: 14px;
+	color: #A00;
+}
+#datepicker {
+	margin-bottom: -150px;
+}
+h3 {
+	color:#CF6;
+}
+
+p{
+	color: #CF6;
+	
+	
+}
+
+

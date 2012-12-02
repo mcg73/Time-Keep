@@ -1,0 +1,14 @@
+
+mcgraw
+09/28/2012
+time in: 9:30am
+time out: 5:30pm
+notes: Friday
+hours today: 8
+
+test
+09/11/2012
+time in: 7:30am
+time out: 2:15pm
+notes: 
+hours today: 6.75
