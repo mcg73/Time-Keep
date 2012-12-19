@@ -1,10 +1,11 @@
-<?php header('Access-Control-Allow-Origin: *'); ?><!--attempting to correct an error on the js console-not exactly sure where this script goes -->
+<?php header('Access-Control-Allow-Origin: *'); ?>
+<!--attempting to correct an error on the js console-+++++++++++++++ -->
 <!--this is the main file for the application UI -->
 <!doctype html>
-<html>
+<html style="border: none;">
 <head>
 <meta charset="UTF-8">
-<title>McTimeClocker</title>
+<title>Time-Tracker</title>
 <!--external style sheets -->
 <link type="text/css" href="../css/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
 <link type="text/css" href="../css/jquery.timepicker.css" rel="stylesheet"/>
@@ -18,7 +19,6 @@
 <script type="text/javascript" src="../js/getData.js"></script>
 <script type="text/javascript" src="../js/jquery.timepicker.js"></script>
 <script type="text/javascript" src="../js/jquery-ui-1.8.23.custom.min.js"></script>
-
 <script type="text/javascript">
 //when the page is ready do this:
 //currently there are no checks or validation--this will change soon and check for null values & empty string values will be added 
@@ -59,7 +59,7 @@ $(document).ready(function(){
 	});
 	$(function() {var welcome = $( "#welcome1" ).tabs({
 				  collapsible:true,
-				  selected: -1,
+				  selected: 0
 				 });
 				 
 	});
@@ -69,67 +69,65 @@ $(document).ready(function(){
 //end the script
 </script>
 </head>
-<body>
-<section id="theContainer">
-<section id="mainContain">
-<header>Project Details & Time Tracker</header>
-<div id="welcome1"><!--this div is the jquery tabs used for instructions of the app and all user details input-->
-     <ul>
-     <li style="font-size:14px; margin: 0 10px 0 5px;"><a href="#tabs2">User Name</a></li>
-     <li style="font-size:14px; margin: 0 10px 0 5px;"><a href="#tabs3">Daily Hours</a></li>
-     <li style="font-size:14px; margin: 0 10px 0 5px;"><a href="#tabs4">Notes</a></li>
-     <li style="font-size:14px; margin: 0 10px 0 5px;"><a href="#tabs5">Submit</a></li>
-     <li style="font-size:14px; margin: 0 10px 0 5px;"><a href="#tabs6">Total Hours</a></li>
-     <li style="font-size:14px; margin: 0 5px 0 0;"><a href="#tabs7">FYI</a></li>
-     </ul>
-     	<div id="tabs2"><p>Your username can be anything you like- when you decide on a username stick with it because your hours are written to a text document with your username as the title. Once you submit your first set of daily details your text document is created. Your text document can be viewed anytime by entering your username in the <span>'Veiw Your Details Page'</span> box below right.</p></div>
-        <div id="tabs3"><p>Following your input of 'time in' and 'time out', your total hours are calculated & displayed for you- <span>you should enter those hours in the 'daily hours' </span>input box so they will be written to your file</p></div>
-        <div id="tabs4"><p>If you have notes you may enter them into the alloted space, if you have no notes this area can be left blank</p></div>
-        <div id="tabs5"><p>After you finish your daily input-click submit and your details are recorded. You will be automatically redirected back to the input page if you need to enter details for another day</p></div>
-        <div id="tabs6"><p>Whenever you would like to see or print all your daily details just enter your username in the "View Your Details Page" box and click submit- to print click file/print in your browsers toolbar</p></div>
-        <div id="tabs7"><p>For the best user experience, use something other than Internet Explorer</p></div> 
-     </div><!--end div used for instructions-->
-<div id="inputContain"><!--this div contains all inputs of daily details-->
-<h3>Enter Daily Details</h3>
-  <div class="datepicker">
-    <form name="web_form" id="web_form"  method="post" action="process-form-data.php">
-         <input type="text" placeholder="Username" size="25" name="name" id="name" /><br>
-         <input id="datepicker" size="25" placeholder="Date" name='datepicker' type="text" class="time"/><br>
-         <input id="timeIn" name='timeIn' size="25" placeholder="Time In" type="text" class="time"><br>
-         <input id="timeOut" name="timeOut" type="text" placeholder="Time Out"class="time" /><br>
-         <input type="text" name="totHr" placeholder="Enter Daily Total Hours" size="25" id="totHr"/><br>
-         <textarea name="comments" placeholder="Project Title/Notes"  id="comments" cols="25" rows="5" ></textarea><br>
-         <input type="submit" value="Submit"  />
-   </form>
-  </div> <!--end daily details-->
-</div> <!--end welcome1-->
-<!--the below div elements are used to display the text at the onChange event-->
-<div id = "totals">
-<h3>Current Input Details:</h3>
-<div id = "nameHold"></div>
-<div id = "dateHold"></div>
-<div id = "inHold"></div>
-<div id = "outHold"></div>
-<div id = "hoursHold"></div>
-<div id="detailsContain"></div>
-</div><!--end totals-->
+<body style="height: auto; width: 100%">
+<section id="theContainer" style="position: absolute; top: 5%; left: 2%; margin: 0 auto; width: auto;">
+  <section id="mainContain">
+  <div id="intro"></div>
+  
+    <header style="color: rgba(112,116,80,0.5); font-family: impact; font-size: 74px; padding: 10px; letter-spacing: -2px; text-shadow: -2px 1px 1px black;">Time-Tracker Demo 
+    <h3 style="font-family: impact; font-size: 16px; color: rgba(255,0,0,0.6); letter-spacing: 1px; margin-top: 20px; text-shadow: none;">source available <a href="https://github.com/mcg73/Time-Keep" style="font-size: 18px; color:rgba(102,255,255,0.8")> @gitHub </a></h3> </header>
+    
+    <div id="inputContain"><!--this div contains all inputs of daily details-->
+      <h3 style="color: #330; font-family: impact; font-size: 24px; text-align: center;" >Enter Daily Details</h3>
+      <div class="datepicker">
+        <form name="web_form" id="web_form"  method="post" action="process-form-data.php">
+          <input type="text" placeholder="Username" size="25" name="name" id="name" />
+          <br>
+          <input id="datepicker" size="25" placeholder="Date" name='datepicker' type="text" class="time"/>
+          <br>
+          <input id="timeIn" name='timeIn' size="25" placeholder="Time In" type="text" class="time">
+          <br>
+          <input id="timeOut" name="timeOut" type="text" placeholder="Time Out"class="time" />
+          <br>
+          <input type="text" name="totHr" placeholder="Daily Hours" size="25" id="totHr"/>
+          <br>
+          <textarea name="comments" placeholder="Project-Notes"  id="comments" cols="25" rows="5" style="background-color:#333333; color:#BBB; text-align:center; font-weight:bolder; font-size: 14px;" ></textarea>
+          <br>
+          <input type="submit" value="Submit"  />
+        </form>
+      </div>
+      <!--end daily details--> 
+    </div>
+    <!--end welcome1--> 
+    <!--the below div elements are used to display the text at the onChange event-->
+    <div id = "totals">
+      <h3 style="color: #330; font-family: impact; font-size: 24px; text-transform: lowercase;">Current Input Details:</h3>
+      <div id = "nameHold"></div>
+      <div id = "dateHold"></div>
+      <div id = "inHold"></div>
+      <div id = "outHold"></div>
+      <div id = "hoursHold"></div>
+      <div id="detailsContain"></div>
+    </div>
+    <!--end totals--> 
+    
+  </section>
+  <section id="outputContain" style="margin: 0 auto; position: relative; top: 0%; right: 0%; margin-left: 3pt; height: auto;">
+    <div id="userSubmit" style="padding-bottom: 0px; height: 300px;">
+      <h3 style="color: #330; font-family: impact; font-size: 24px">View Your Details</h3>
+      <form name="details_form" id="details_form" method="post" action="detailsView.php" >
+        <input type="text" id="nameDetails" name="nameDetails" size="25" placeholder="username" />
+        <br>
+        <br>
+        <input type="submit" value="Submit"  />
+      </form>
+          <div style="width: 100%; height: 100%; display: inline-block; color: #330; line-height: 15px;">this is a demo application for recording daily/project work hours - I created this for it's functionality and to practice the scripting language- php. This demo also uses the jQuery timepicker.js plugin created by <a href="http://www.notifications@github.com">Jon Thornton</a></div>
+    </div>
+    <!--end user submit--> 
 
-</section>
-<section id="outputContain">
-<div id="userSubmit">
-<h3>View Your Details</h3>
-   <form name="details_form" id="details_form" method="post" action="detailsView.php" >
-      <input type="text" id="nameDetails" name="nameDetails" size="25" placeholder="username" />
-      <br><br><input type="submit" value="Submit"  />
-   </form>
-   <input type="button" id="aButton" value="click" onClick="getData()" /><br><br><br>
-   <div id="onScreenDisplay"></div>
-  <!-- <input type="text" id="name" name="nameDetails" size="25" placeholder="username" />-->
-   <input type="button" id="bButton" value="click" /><br><br><br>
-   
-</div><!--end user submit-->
-
-</section>
+  </section>
+  
 </section>
 </body>
+</html>
 </html>

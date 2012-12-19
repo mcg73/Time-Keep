@@ -1,11 +1,21 @@
 body {
 	background: #fff;
-	color: #33F;
-	font-family: 'Numans', normal;
+	color: #500;
+	font-family: "MS Serif", "New York", serif;
 	margin: 30px;
 	font-size: 16px;
-	line-height: 145%;
-	background-color:#777;
+	line-height: 35px;
+	background-color: #777;
+	width: auto;
+	height: 1500px;
+	border: none;
+	text-transform: lowercase;
+}
+div{
+	border: none;
+	text-align: center;
+	color: #0A5352;
+	font-weight: bolder;
 }
 h1, h2, h3 {
 	color: #CF6;
@@ -23,7 +33,7 @@ input.time, input.date {
 	font-size: 16px;
 }
 input.time {
-	width: 100px;
+	width: 100%;
 }
 input.date {
 	width: 90px;
@@ -32,7 +42,8 @@ input {
 	line-height: 20px;
 }
 a {
-	color: #00f;
+	font-family: Tahoma, Geneva, sans-serif; 
+	color: #020;
 }
 h1 a {
 	color: #000;
@@ -44,7 +55,7 @@ image {
 	border: 1px solid #ddd;
 	padding: 10px;
 	margin: 10px 0 30px 0;
-	background-color: #000066;
+	background-color: rgba(102,153,153,0.4);
 	border-radius: 5px;
 	height: 200px;
 }
@@ -87,7 +98,10 @@ image {
 	float: left;
 }
 input {
-	margin: 10px 0 10px 0;
+	margin-top: 5px;
+	margin-right: 0;
+	margin-bottom: 5px;
+	margin-left: 0;
 }
 button {
 	margin-left: 38%;
@@ -444,40 +458,49 @@ section {
 }
 #inputContain {
 	width: 250px;
-	background-color: #5b667e;
+	background-color: #777777;
 	display: inline-table;
 	padding: 25px;
 	margin: 15px;
 	border-radius: 10px;
-	border: groove #A00 4px;
+	border: 4px none #A00;
 	border-radius: 14px;
 	display: inline-block;
 	color: #CF6;
 	float: left;
 	text-align: left;
 	line-height: 50px;
-	letter-spacing:0px;
+	letter-spacing: 0px;
 }
 #calendar {
 	margin-top: 25px;
 }
 span {
 	font-size: 18px;
-	color: #CFF;
+	color: #3B494A;
 	font-weight: 700;
 }
 form {
 	font-size: 14px;
+	background-color: #777777;
+	border-color: black;
+	margin: 0 auto;
+	width: 100%;
 }
 #totals {
 	float: right;
 	width: auto;
-	background-color: #5B667E;
-	padding: 55px;
+	background-color: #777777;
+	padding: 40px;
 	margin-top: 15px;
-	border: groove #A00 4px;
+	border: 4px none #A00;
 	border-radius: 14px;
-	color: #FF3;
+	color: #323232;
+	font-family: "MS Serif", "New York", serif;
+	font-weight: lighter;
+	font-size: 24px;
+	text-transform: lowercase;
+	height: 450px;
 }
 #datepicker {
 	margin-bottom: -150px;
@@ -490,13 +513,22 @@ p {
 }
 input {
 	float: left;
+	text-align: center;
+	min-width: 200px;
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #0CC;
+	font-size: 14px;
+	background-color: #333;
+	font-weight: bolder;
+	width: 100%;
 }
 #welcome1 {
 	background-color: #5B667E;
 	color: #F93;
 	width: 100%;
 	height: auto;
-	border: groove 2px #AA0200;
+	border: 2px none #AA0200;
 	border-radius: 14px;
 	text-align: left;
 }
@@ -505,20 +537,20 @@ li:hover{
 }
 #userSubmit{
 	width: 278px;
-	background-color: #5B667E;
+	background-color: #777777;
 	padding: 25px;
-	border: groove #A00 4px;
+	border: 4px none #A00;
 	border-radius: 14px;
 	color: #FF3;
 }
 #mainContain{
-	width: 700px;
-	margin-left: 5%;
-	background-color:#BBB;
+	width: auto;
+	margin-left: 0%;
+	background-color: #BABBBA;
 	padding: 25px;
-	border-radius: 13px;
+	border-radius: 3px;
 	height: auto;
-	border: groove 4px #CC0000;
+	border: 4px none #CC0000;
 	display: inline-block;
 	float: left;
 }
@@ -534,19 +566,16 @@ header{
 	height: auto;
 	background-color: #BBB;
 	display: inline-block;
-	border-radius: 13px;
-	border: groove 4px #CC0000;
+	border-radius: 3px;
+	border: 4px none #CC0000;
 	float: left;
 	margin-left: 25px;
 	padding: 25px;
-	
-	
-	
-	
+
+
 }
 #theContainer{
 	height: 900px;
 	width: 2000px;
 	display: inline-block;
 }
-
